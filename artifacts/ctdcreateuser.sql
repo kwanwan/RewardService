@@ -1,0 +1,5 @@
+DROP USER loyalty cascade;
+CREATE USER loyalty IDENTIFIED BY Welcome_123456;
+GRANT CREATE SESSION TO loyalty;
+GRANT DWROLE TO loyalty;
+COMMIT;
