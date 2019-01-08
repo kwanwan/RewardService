@@ -4,6 +4,7 @@ build:
     - internal/docker-build:
         dockerfile: Dockerfile
         image-name: pointscollection
+        no-cache: true
     - internal/docker-push:
         username: $DOCKER_USER
         password: $DOCKER_PASSWORD
