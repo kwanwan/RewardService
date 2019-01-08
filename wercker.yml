@@ -11,7 +11,7 @@ build:
         registry: $DOCKER_REGISTRY
         tag: $WERCKER_GIT_COMMIT
         ports: 8080
-        cmd: node server.js
+        cmd: npm start
 
 deploy:
   box:
