@@ -4,11 +4,3 @@ build:
     - internal/docker-build
       dockerfile: Dockerfile
       image-name: pointscollection
-    - internal/docker-push:
-        username: $DOCKER_USER
-        password: $DOCKER_PASSWORD
-        repository: $DOCKER_REPO
-        registry: $DOCKER_REGISTRY
-        tag: $WERCKER_GIT_COMMIT
-        ports: 80
-        cmd: "nginx -g 'daemon off';"
