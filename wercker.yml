@@ -14,9 +14,6 @@ build:
         cmd: npm start
 
 deploy:
-  box:
-    id: alpine
-    cmd: /bin/sh
   steps:
     - bash-template
 
