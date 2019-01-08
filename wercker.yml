@@ -11,6 +11,13 @@ build:
         cp -r . /usr/src/app
 
     - npm-install
+
+    - script:
+      name: list
+      code: |
+        ls -r /usr/src/app
+        ls -r /pipeline/source/node_modules/oracledb
+        
     - internal/docker-push:
         username: $DOCKER_USER
         password: $DOCKER_PASSWORD
