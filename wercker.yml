@@ -1,10 +1,9 @@
-box:
-  id: node:6
+box: node:6
 build:
   steps:
-    - internal/docker-build
-      dockerfile: Dockerfile
-      image-name: pointscollection
+    - internal/docker-build:
+        dockerfile: Dockerfile
+        image-name: pointscollection
     - internal/docker-push:
         username: $DOCKER_USER
         password: $DOCKER_PASSWORD
