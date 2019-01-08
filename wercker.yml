@@ -14,7 +14,7 @@ build:
 
 deploy:
   box:
-    id: alpine
+    id: node
     cmd: /bin/sh
   steps:
     - bash-template
