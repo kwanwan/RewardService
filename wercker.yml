@@ -1,10 +1,7 @@
 box: node:6
 build:
   steps:
-    - internal/docker-build:
-        dockerfile: Dockerfile
-        image-name: pointscollection
-        no-cache: true
+    - npm-install
     - internal/docker-push:
         username: $DOCKER_USER
         password: $DOCKER_PASSWORD
