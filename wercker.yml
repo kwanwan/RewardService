@@ -9,7 +9,6 @@ build:
         export WALLET_LOCATION="/usr/src/app/Wallet_ATPDemoDB"
         mkdir /usr/src/app
         cp -r . /usr/src/app
-        ls -r /pipeline/source/node_modules/oracledb
 
     - npm-install
     - internal/docker-push:
