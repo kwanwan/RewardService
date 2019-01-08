@@ -13,12 +13,12 @@ build:
     - npm-install
 
     - script:
-      name: list app
+      name: list-app
       code: |
         ls -r /usr/src/app
 
     - script:
-          name: list oracledb
+          name: list-oracledb
           code: |
         ls -r /pipeline/source/node_modules/oracledb
 
