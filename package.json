@@ -14,7 +14,8 @@
     "body-parser": "^1.18.1",
     "express": "^4.16.4",
     "oracledb": "^2.3.0",
-    "request": ""
+    "request": "",
+    "unzip": "^0.1.11"
   },
   "devDependencies": {
     "chai": "^3.5.0",
