@@ -11,8 +11,12 @@ build:
         registry: $DOCKER_REGISTRY
         tag: $WERCKER_GIT_COMMIT
         ports: 80
+        cmd: npm start
 
 deploy:
+  box:
+    id: alpine
+    cmd: /bin/sh
   steps:
     - bash-template
 
