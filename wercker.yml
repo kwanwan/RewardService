@@ -18,8 +18,8 @@ build:
         ls -r /usr/src/app
 
     - script:
-          name: list-oracledb
-          code: |
+      name: list-oracledb
+      code: |
         ls -r /pipeline/source/node_modules/oracledb
 
     - internal/docker-push:
