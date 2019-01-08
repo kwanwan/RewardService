@@ -13,9 +13,6 @@ build:
         ports: 80
 
 deploy:
-  box:
-    id: node
-    cmd: /bin/sh
   steps:
     - bash-template
 
