@@ -1,27 +1,9 @@
 box: node:6
 build:
   steps:
-    - script:
-      name: download
-      code: |
-        mkdir /usr/src/app
-        cp -r . /usr/src/app
-        export LD_LIBRARY_PATH="/usr/src/app/oracle"
-        export TNS_ADMIN="/usr/src/app/Wallet_ATPDemoDB"
-        export WALLET_LOCATION="/usr/src/app/Wallet_ATPDemoDB"
-
-    - npm-install
-
-    - script:
-      name: list-app
-      code: |
-        ls -r /usr/src/app
-
-    - script:
-      name: list-oracledb
-      code: |
-        ls -r /usr/src/app/oracle
-
+    - internal/docker-build:
+        dockerfile: Dockerfile
+        image-name: pointscollection
     - internal/docker-push:
         username: $DOCKER_USER
         password: $DOCKER_PASSWORD
