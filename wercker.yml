@@ -10,7 +10,7 @@ build:
         repository: $DOCKER_REPO
         registry: $DOCKER_REGISTRY
         tag: $WERCKER_GIT_COMMIT
-        ports: 80
+        ports: 8080
         cmd: node server.js
 
 deploy:
