@@ -12,6 +12,8 @@ build:
 
     - npm-install
 
+    -npm-test
+
     - script:
       name: list-app
       code: |
