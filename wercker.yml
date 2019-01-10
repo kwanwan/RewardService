@@ -12,8 +12,6 @@ build:
 
     - npm-install
 
-    - npm-test
-
     - script:
       name: list-app
       code: |
@@ -31,7 +29,6 @@ build:
         registry: $DOCKER_REGISTRY
         tag: $WERCKER_GIT_COMMIT
         ports: 8080
-        cmd: node server.js
 
 deploy:
   box:
