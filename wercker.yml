@@ -15,6 +15,7 @@ build:
     - script:
       name: install oracle instant client
       code: |
+        env
         cd $WERCKER_SOURCE_DIR
         unzip ./oracle/instantclient-basiclite-linux.x64-12.2.0.1.0 -d /opt/oracle
 
