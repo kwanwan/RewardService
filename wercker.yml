@@ -12,11 +12,17 @@ build:
       code: |
         cd $WERCKER_SOURCE_DIR
         unzip ./oracle/instantclient-basiclite-linux.x64-12.2.0.1.0 -d /opt/oracle
+
+    - npm-install
+
+    - script:
+      name: start server
+      code: |
+        cd $WERCKER_SOURCE_DIR
         export LD_LIBRARY_PATH=$WERCKER_SOURCE_DIR/oracle/instantclient_12_2
         export TNS_ADMIN=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
         export WALLET_LOCATION=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
-
-    - npm-install
+        npm start
 
     - internal/docker-push:
         username: $DOCKER_USER
@@ -25,7 +31,7 @@ build:
         registry: $DOCKER_REGISTRY
         tag: $WERCKER_GIT_COMMIT
         ports: 8080
-        cmd: npm start
+
 
 deploy:
   box:
