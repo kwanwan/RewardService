@@ -19,7 +19,7 @@ build:
       name: start server
       code: |
         cd $WERCKER_SOURCE_DIR
-        export LD_LIBRARY_PATH=$WERCKER_SOURCE_DIR/oracle/instantclient_12_2
+        export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2
         export TNS_ADMIN=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
         export WALLET_LOCATION=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
         npm start
