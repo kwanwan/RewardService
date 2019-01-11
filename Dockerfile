@@ -9,10 +9,10 @@ RUN apt-get update \
 
 # ADD ORACLE INSTANT CLIENT (instant client zip should be in ./oracle/linux dir)
 RUN mkdir -p opt/oracle
-ADD ./oracle/linux/ .
+ADD ./oracle/ .
 
 # 12.2
-RUN unzip instantclient-basic-linux.x64-12.2.0.1.0 -d /opt/oracle
+RUN unzip instantclient-basiclite-linux.x64-12.2.0.1.0 -d /opt/oracle
 
 ENV LD_LIBRARY_PATH="/opt/oracle/instantclient_12_2"
 
@@ -34,4 +34,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-CMD npm start
+CMD [ "npm", "start" ]
