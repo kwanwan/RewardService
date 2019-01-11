@@ -1,9 +1,4 @@
 box: node:6
-env:
-  LD_LIBRARY_PATH: /opt/oracle/instantclient_12_2
-  TNS_ADMIN: $WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
-  WALLET_LOCATION: $WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
-
 build:
   steps:
     - script:
@@ -29,6 +24,7 @@ build:
         tag: $WERCKER_GIT_COMMIT
         ports: 8080
         working-dir: $WERCKER_SOURCE_DIR
+        env: LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2,TNS_ADMIN=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB,WALLET_LOCATION=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
         cmd: npm start
 
 deploy:
