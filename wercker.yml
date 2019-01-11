@@ -12,7 +12,7 @@ build:
       code: |
         cd $WERCKER_SOURCE_DIR
         unzip ./oracle/instantclient-basiclite-linux.x64-12.2.0.1.0 -d /opt/oracle
-        export LD_LIBRARY_PATH=$WERCKER_SOURCE_DIR/oracle
+        export LD_LIBRARY_PATH=$WERCKER_SOURCE_DIR/oracle/instantclient_12_2
         export TNS_ADMIN=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
         export WALLET_LOCATION=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
 
