@@ -1,4 +1,9 @@
 box: node:6
+env:
+  LD_LIBRARY_PATH: /opt/oracle/instantclient_12_2
+  TNS_ADMIN: $WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
+  WALLET_LOCATION: $WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
+
 build:
   steps:
     - script:
@@ -15,13 +20,6 @@ build:
 
     - npm-install
 
-    - script:
-      name: start server
-      code: |
-        export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2
-        export TNS_ADMIN=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
-        export WALLET_LOCATION=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
-
     - internal/docker-push:
         username: $DOCKER_USER
         password: $DOCKER_PASSWORD
@@ -31,7 +29,6 @@ build:
         ports: 8080
         working-dir: $WERCKER_SOURCE_DIR
         cmd: npm start
-
 
 deploy:
   box:
