@@ -22,7 +22,7 @@ build:
         repository: $DOCKER_REPO
         registry: $DOCKER_REGISTRY
         tag: $WERCKER_GIT_COMMIT
-        ports: 8080
+        ports: 80
         working-dir: $WERCKER_SOURCE_DIR
         env: LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2 TNS_ADMIN=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB WALLET_LOCATION=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
         cmd: npm start
