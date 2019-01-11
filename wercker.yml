@@ -22,7 +22,6 @@ build:
         export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2
         export TNS_ADMIN=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
         export WALLET_LOCATION=$WERCKER_SOURCE_DIR/Wallet_ATPDemoDB
-        npm start
 
     - internal/docker-push:
         username: $DOCKER_USER
@@ -31,6 +30,7 @@ build:
         registry: $DOCKER_REGISTRY
         tag: $WERCKER_GIT_COMMIT
         ports: 8080
+        cmd: npm start
 
 
 deploy:
