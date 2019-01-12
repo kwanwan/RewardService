@@ -5,14 +5,7 @@ build:
       name: download
       code: |
         apt-get update
-        apt-get install -y libaio1 build-essential unzip curl
-
-    - script:
-      name: install oracle instant client
-      code: |
-        env
-        cd $WERCKER_SOURCE_DIR
-        unzip ./oracle/instantclient-basiclite-linux.x64-12.2.0.1.0 -d ./oracle
+        apt-get install -y libaio1 build-essential curl
 
     - npm-install
 
