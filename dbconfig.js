@@ -1,5 +1,5 @@
 module.exports= {
 dbuser: 'admin', 
 dbpassword: 'foReVER@4Stupid', 
-connectString: 'atpdemodb_medium' 
+connectString: 'atpdemodb_tp' 
 }
