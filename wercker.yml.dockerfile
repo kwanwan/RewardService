@@ -5,13 +5,13 @@ build:
         dockerfile: Dockerfile
         image-name: pointscollection
     - internal/docker-push:
+        image-name: pointscollection
         username: $DOCKER_USER
         password: $DOCKER_PASSWORD
         repository: $DOCKER_REPO
         registry: $DOCKER_REGISTRY
         tag: $WERCKER_GIT_COMMIT
         ports: 8080
-        cmd: npm start
 
 deploy:
   box:
