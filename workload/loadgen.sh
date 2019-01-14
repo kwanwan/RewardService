@@ -6,8 +6,8 @@ SERVERPORT=8080
 APIS=/loyalty/v1
 POINTAPI=/points
 COFFEEAPI=/coupon
-CSTART=40001
-CSTOP=40010
+CSTART=40046
+CSTOP=40055
 
 if [ "$SSL" = "true" ]; then
   GURL="curl --silent --insecure https://$SERVERIP:$SERVERPORT"
