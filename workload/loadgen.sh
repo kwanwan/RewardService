@@ -1,7 +1,7 @@
 #!/bin/bash
 # set ssl to true or false
 SSL=false
-SERVERIP=129.146.154.192
+SERVERIP=129.146.91.150
 SERVERPORT=8080
 APIS=/loyalty/v1
 POINTAPI=/points
