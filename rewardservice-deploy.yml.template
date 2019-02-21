@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: pointscollection
+  name: rewardservice
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: pointscollection
+        app: rewardservice
     spec:
       containers:
-      - name: pointscollection
+      - name: rewardservice
         image: $DOCKER_REGISTRY/$DOCKER_REPO:$WERCKER_GIT_COMMIT
         ports:
         - containerPort: 8080

@@ -1,13 +1,12 @@
 {
-  "name": "points-collection",
+  "name": "rewardservice",
   "version": "2.0.0",
   "description": "CafeSupremo backend API Service with ATP",
   "main": "server.js",
   "author": "kenneth.heung@oracle.com",
   "scripts": {
-    "test": "mocha test.js --timeout 10000",
     "start": "node server.js",
-    "prepublish": "zip -r target/pointscollection.zip node_modules manifest.json *.js test/*js"
+    "prepublish": "zip -r target/rewardservice.zip node_modules manifest.json *.js test/*js"
   },
   "license": "UPL-1.0",
   "dependencies": {
@@ -18,7 +17,6 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "chai-http": "^2.0.1",
-    "mocha": "^2.4.5"
+    "chai-http": "^2.0.1"
   }
 }
